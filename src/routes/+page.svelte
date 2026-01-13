@@ -12,7 +12,7 @@
 
 <div class="mb-8 w-full">
 	<div
-		class="relative mr-8 ml-8 h-164 overflow-hidden rounded-b-2xl bg-[#F8F32B] p-8 inset-shadow-lg"
+		class="relative mr-8 ml-8 h-128 overflow-hidden rounded-b-2xl bg-[#F8F32B] p-8 inset-shadow-lg md:h-164"
 	>
 		<div class="m-auto flex h-full max-w-250 flex-row align-middle">
 			<div class="flex flex-col justify-center">
