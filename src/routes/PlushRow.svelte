@@ -25,8 +25,11 @@
 	let plushieBag: number[] = [];
 	let activePlushies: number[] = $state([]);
 	let position: number = $state(0.0);
+	let currentPlushieIndex: number = 0;
 
 	onMount(() => {
+		plushieBag = Array.from({ length: PLUSHIES.length }, (_, i) => i);
+		shuffle(plushieBag);
 		requestAnimationFrame(update);
 	});
 
@@ -40,26 +43,12 @@
 
 		const lastPlushPos = position - (activePlushies.length - 1) * PLUSHIE_SIZE;
 		if (lastPlushPos > PLUSHIE_SIZE) {
-			activePlushies.push(nextPlushie());
+			activePlushies.push(plushieBag[currentPlushieIndex]);
+			currentPlushieIndex += 1;
+			currentPlushieIndex %= PLUSHIES.length;
 		}
 
 		requestAnimationFrame(update);
-	}
-
-	function nextPlushie(): number {
-		if (plushieBag.length <= 0) {
-			// activePlushieCooldown += delta;
-			// if (activePlushieCooldown > PLUSHIE_COOLDOWN) {
-			// 	console.log('FUCK');
-			// 	activePlushies.push(nextPlushie());
-			// 	activePlushieCooldown = 0.0;
-			// }
-
-			plushieBag = Array.from({ length: PLUSHIES.length }, (_, i) => i);
-			shuffle(plushieBag);
-			console.log(plushieBag);
-		}
-		return plushieBag.pop() as number;
 	}
 
 	function shuffle(array: any[]) {
@@ -71,9 +60,9 @@
 	}
 </script>
 
-<div class="relative flex flex-row">
+<div class="relative flex h-full flex-row overflow-hidden">
 	{#each activePlushies as plushI, i}
-		{#if position - i * PLUSHIE_SIZE < window.innerWidth}
+		{#if position - i * PLUSHIE_SIZE - PLUSHIE_SIZE < window.innerWidth}
 			<img
 				src={`plushies/${PLUSHIES[plushI]}`}
 				style={`left: ${position - (i + 1) * PLUSHIE_SIZE}px; width: ${PLUSHIE_SIZE}px`}
