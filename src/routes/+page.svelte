@@ -8,13 +8,13 @@
 	>
 		<div class="m-auto flex h-full max-w-250 flex-row align-middle">
 			<div class="flex flex-col justify-center">
-				<h1 class="poller text-left text-7xl">Shrine</h1>
-				<h2 class="font-[Pangolin] text-2xl">
+				<h1 class="poller text-center text-5xl md:text-left md:text-7xl">Shrine</h1>
+				<h2 class="text-center font-[Pangolin] text-2xl md:text-left">
 					Make and code a project about your favorite fictional character, get a grant to buy merch
 					of your character!
 				</h2>
 				<a
-					class="poller mt-8 w-48 rounded-lg bg-[#2B2D42] p-4 text-center text-lg font-bold text-white underline"
+					class="poller mt-8 mr-auto ml-auto w-48 rounded-lg bg-[#2B2D42] p-4 text-center text-lg font-bold text-white underline md:mr-0 md:ml-0"
 					href="https://goog.fillout.com/shrine-ysws-rsvp">RSVP Here!</a
 				>
 			</div>
@@ -75,13 +75,8 @@
 		</p>
 		<h1 class="poller mb-4 text-4xl">Is there anything I can contribute to this YSWS?</h1>
 		<p class="mb-8 font-[Pangolin] text-lg">
-			Yes! You can spread the word about this. If you want to co-org this YSWS, free feel to <a
-				class="text-[#F8F32B] underline"
-				href="https://app.slack.com/client/E09V59WQY1E/D0A7TQRKCBH"
-			>
-				DM me on the Slack
-			</a>
-			or
+			Yes! You can spread the word about this. If you want to co-org this YSWS, free feel to DM one
+			of the organizers on Slack (on the bottom of the page) or
 			<a class="text-[#F8F32B] underline" href="mailto:me@ifeellikeharukananase.tech">email me</a>!
 		</p>
 	</div>
@@ -89,7 +84,7 @@
 
 <div class="mt-8 mr-8 ml-8 rounded-t-2xl bg-[#8D99AE] inset-shadow-lg">
 	<div
-		class="relative m-auto flex max-w-250 flex-col justify-between gap-8 p-8 text-black md:flex-row md:gap-0"
+		class="relative m-auto flex max-w-250 flex-col justify-between gap-8 p-8 text-center text-black md:flex-row md:gap-0 md:text-left"
 	>
 		<div class="flex flex-col">
 			<h1 class="poller mb-4 text-3xl font-bold">Links</h1>
@@ -123,7 +118,7 @@
 			<a href="https://github.com/Shuflduf/Shrine-Site" class="font-[Pangolin] underline">Github</a>
 			<a
 				href="https://app.slack.com/client/E09V59WQY1E/D078X2VP0NT"
-				class="font-[Pangolin] underline">Made by @Michael</a
+				class="font-[Pangolin] underline">@Michael</a
 			>
 		</div>
 	</div>
